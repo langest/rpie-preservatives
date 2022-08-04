@@ -70,6 +70,25 @@ syncDirectory() {
 	--filter "- fbneo*/**" \
         --filter "- **sd.raw" \
         --filter "- **.m3u" \
+        --filter "- **.bin" \
+        --filter "- **.raw" \
+        --filter "- **.bak" \
+        --filter "- **.rom" \
+        --filter "- **.ngp" \
+        --filter "- **.CCD" \
+        --filter "- **.ccd" \
+        --filter "- **.SUB" \
+        --filter "- **.sub" \
+        --filter "- **.html" \
+        --filter "- **.wav" \
+        --filter "- **.iso" \
+        --filter "- **.mp3" \
+        --filter "- **.mds" \
+        --filter "- **.png" \
+        --filter "- **.jpeg" \
+        --filter "- **.jpg" \
+        --filter "- **scummvm/** TODO HERE" \
+        --filter "- **dinosaur_planet/rom" \
         --filter "- Mupen64plus/**" \
         --filter "- User/Cache**" \
         --filter "- User/Config**" \
@@ -89,7 +108,9 @@ syncIfValidSystem() {
         retropie) echo "skipping retropie directory" ;;
         kodi) echo "skipping kodi" ;;
 	pc) echo "skipping pc" ;;
+        scummvm) echo "skipping scummvm" ;;
         ports) echo "skipping ports" ;;
+	#TODO: implement for specific ports
         *) syncDirectory ;;
     esac
 }
